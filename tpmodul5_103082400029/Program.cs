@@ -10,10 +10,11 @@ namespace tpmodul5_103082400029
     {
         static void Main(string[] args)
         {
-
             HaloGeneric halo = new HaloGeneric();
             halo.SapaUser<string>("Debby");
 
+            DataGeneric<string> data = new DataGeneric<string>("103082400029");
+            data.PrintData();
         }
     }
 
@@ -25,4 +26,18 @@ namespace tpmodul5_103082400029
         }
     }
 
+    class DataGeneric<T>
+    {
+        private T data;
+
+        public DataGeneric(T data)
+        {
+            this.data = data;
+        }
+
+        public void PrintData()
+        {
+            Console.WriteLine("Data yang tersimpan adalah : " + data);
+        }
+    }
 }
